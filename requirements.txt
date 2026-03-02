@@ -1,0 +1,10 @@
+numpy==1.26.4
+scipy==1.13.1
+matplotlib==3.9.1
+rasterio==1.4.3
+openpiv==0.24.2
+rivgraph==0.5.0
+pandas==2.3.1
+geopandas==0.13.2
+fiona==1.9.1
+scikit-image==0.19.3
