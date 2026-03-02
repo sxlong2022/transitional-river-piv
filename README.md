@@ -1,4 +1,4 @@
-# Transitional Meander PIV Workflow
+# Transitional River PIV Workflow
 
 This repository contains the source code for the paper: **"An enhanced satellite PIV and graph-based skeletonization workflow for diagnosing migration regimes in regulated transitional rivers"** by Xiaolong Song et al., submitted to *Computers & Geosciences*.
 
@@ -10,8 +10,8 @@ The workflow requires Python 3.9 or higher. We recommend using `conda` for envir
 
 ```bash
 # Clone the repository
-git clone https://github.com/sxlong2022/transitional-meander-piv.git
-cd transitional-meander-piv
+git clone https://github.com/sxlong2022/transitional-river-piv.git
+cd transitional-river-piv
 
 # Create and activate a conda environment
 conda create -n riverpiv python=3.10
@@ -81,7 +81,7 @@ If you use this codebase or the multi-angle PIV workflow, please cite both the p
 > Song, X., et al. (2026). An enhanced satellite PIV and graph-based skeletonization workflow for diagnosing migration regimes in regulated transitional rivers. *Computers & Geosciences* (Submitted).
 
 **The Software:**
-> Song, X. (2026). sxlong2022/transitional-meander-piv: multi-angle Satellite PIV and Trunk Aggregation Workflow (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.18831632
+> Song, X. (2026). sxlong2022/transitional-river-piv: multi-angle Satellite PIV and Trunk Aggregation Workflow (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.18831632
 
 ## 7. Dependencies
 
