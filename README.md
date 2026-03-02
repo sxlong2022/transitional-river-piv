@@ -6,7 +6,7 @@ The codebase implements a comprehensive workflow for extracting subpixel riverba
 
 ## 1. Installation
 
-The workflow requires Python 3.9 or higher. We recommend using `conda` for environment management.
+The workflow requires Python 3.9 (specifically required by RivGraph). We recommend using `conda` for environment management.
 
 ```bash
 # Clone the repository
@@ -14,7 +14,7 @@ git clone https://github.com/sxlong2022/transitional-river-piv.git
 cd transitional-river-piv
 
 # Create and activate a conda environment
-conda create -n riverpiv python=3.10
+conda create -n riverpiv python=3.9
 conda activate riverpiv
 
 # Install dependencies
