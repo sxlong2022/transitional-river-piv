@@ -153,7 +153,7 @@ def main() -> None:
         out_dir = root / "results" / "figures" / "trunk_overlay"
         out_dir.mkdir(parents=True, exist_ok=True)
         thr_tag = "_".join([str(int(x)) for x in args.min_trunk_lengths_m])
-        out_path = out_dir / f"{site}_mask{mask}_year{year}_trunk_overlay_{thr_tag}.png"
+        out_path = out_dir / f"Fig5_{site}_mask{mask}_year{year}_trunk_overlay_{thr_tag}.png"
 
     if not npz_path.exists():
         raise FileNotFoundError(npz_path)

@@ -98,7 +98,7 @@ def _range_summary(values: List[float]) -> Dict[str, float]:
     }
 
 
-def plot_fig9(
+def plot_fig10(
     out_path: Path,
     *,
     sites: List[str],
@@ -190,7 +190,7 @@ def plot_fig9(
     corrCM_s = [_range_summary(_collect(s, "corr_absC_vs_absMn")) for s in site_order]
 
     summary = {
-        "mode": "fig9_synthesis",
+        "mode": "fig10_synthesis",
         "sites": site_order,
         "site_labels": site_labels,
         "yr_masks": [int(m) for m in yr_masks],
@@ -344,9 +344,9 @@ def main() -> None:
     if args.out:
         out_path = Path(args.out)
     else:
-        out_path = _PROJECT_ROOT / "results" / "figures" / "paper" / "Fig9_Synthesis.png"
+        out_path = _PROJECT_ROOT / "results" / "figures" / "paper" / "Fig10_Synthesis.png"
 
-    plot_fig9(
+    plot_fig10(
         out_path,
         sites=[str(s) for s in args.sites],
         yr_masks=[int(m) for m in args.yr_masks],

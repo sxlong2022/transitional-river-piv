@@ -243,7 +243,7 @@ def main() -> None:
     if not args.out:
         out_dir = _PROJECT_ROOT / "results" / "figures" / "profiles"
         out_dir.mkdir(parents=True, exist_ok=True)
-        out_path = out_dir / f"{site}_mask{mask}_trunk_profiles.png"
+        out_path = out_dir / f"Fig6_{site}_mask{mask}_trunk_profiles.png"
     else:
         out_path = Path(args.out)
         out_path.parent.mkdir(parents=True, exist_ok=True)

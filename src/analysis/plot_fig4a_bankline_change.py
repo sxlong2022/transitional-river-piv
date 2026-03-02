@@ -597,7 +597,7 @@ def _add_panel_label(ax: plt.Axes, text: str, pos: str = "upper-right") -> None:
     t.set_path_effects([pe.Stroke(linewidth=2.0, foreground="w"), pe.Normal()])
 
 
-def plot_fig3a_bankline_change(
+def plot_fig4a_bankline_change(
     site: str,
     mask_level: int,
     year0: int,
@@ -1334,7 +1334,7 @@ def main() -> None:
     if args.out:
         out_path = Path(args.out)
     else:
-        out_path = _PROJECT_ROOT / "results" / "figures" / "paper" / f"Fig3a_{site}_bankline_change.png"
+        out_path = _PROJECT_ROOT / "results" / "figures" / "paper" / f"Fig4a_{site}_bankline_change.png"
 
     if not mask0_path.exists():
         raise FileNotFoundError(mask0_path)
@@ -1424,7 +1424,7 @@ def main() -> None:
         roi_args = " ".join([f"--roi {xmin:.2f} {xmax:.2f} {ymin:.2f} {ymax:.2f}" for (xmin, xmax, ymin, ymax) in roi_list])
         print(f"  {roi_args}")
 
-    plot_fig3a_bankline_change(
+    plot_fig4a_bankline_change(
         site=site,
         mask_level=mask_level,
         year0=year0,

@@ -185,7 +185,7 @@ def main() -> None:
     else:
         out_dir = _PROJECT_ROOT / "results" / "figures" / "spectral"
         out_dir.mkdir(parents=True, exist_ok=True)
-        out_path = out_dir / f"{site}_mask{mask}_trunk_spectral_structure.png"
+        out_path = out_dir / f"Fig7_{site}_mask{mask}_trunk_spectral_structure.png"
 
     res = analyze_trunk_level_relationships(
         npz_path,

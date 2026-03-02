@@ -104,7 +104,7 @@ def main() -> None:
     else:
         out_dir = _PROJECT_ROOT / "results" / "figures" / "scatter_binned"
         out_dir.mkdir(parents=True, exist_ok=True)
-        out_path = out_dir / f"{site}_mask{mask}_link_scatter_binned.png"
+        out_path = out_dir / f"Fig8_{site}_mask{mask}_link_scatter_binned.png"
 
     res = analyze_link_level_relationships(
         npz_path,

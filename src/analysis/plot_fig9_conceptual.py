@@ -171,7 +171,7 @@ def _draw_curvature_responsive(ax: plt.Axes) -> None:
     )
 
 
-def plot_fig8(out_path: Path, *, preset: str = "paper", dpi: int = 600) -> None:
+def plot_fig9(out_path: Path, *, preset: str = "paper", dpi: int = 600) -> None:
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -205,9 +205,9 @@ def main() -> None:
         out_path = Path(args.out)
     else:
         root = Path(__file__).resolve().parents[2]
-        out_path = root / "results" / "figures" / "paper" / "Fig8_Conceptual.png"
+        out_path = root / "results" / "figures" / "paper" / "Fig9_Conceptual.png"
 
-    plot_fig8(out_path, preset=str(args.preset), dpi=int(args.dpi))
+    plot_fig9(out_path, preset=str(args.preset), dpi=int(args.dpi))
     print(f"Saved: {out_path}")
 
 
