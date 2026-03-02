@@ -10,7 +10,7 @@ The workflow requires Python 3.9 or higher. We recommend using `conda` for envir
 
 ```bash
 # Clone the repository
-git clone https://github.com/[username]/transitional-meander-piv.git
+git clone https://github.com/sxlong2022/transitional-meander-piv.git
 cd transitional-meander-piv
 
 # Create and activate a conda environment
@@ -35,7 +35,7 @@ This script will generate a synthetic image pair, run the OpenPIV extended searc
 
 ### Juruá River Benchmark
 The original raw and water-classified imagery for the Juruá River benchmark (Chadwick et al., 2023) can be downloaded from the Dryad Digital Repository:
-[https://doi.org/10.5061/dryad.8pk0p2ntg](https://doi.org/10.5061/dryad.8pk0p2ntg)
+[https://doi.org/10.25349/D9HG82](https://doi.org/10.25349/D9HG82)
 
 ### Yellow River Data
 The workflow includes a Google Earth Engine script to export Dynamic Surface Water Extent (DSWE) water masks for the Yellow River sites. For detailed instructions, please see `data/README.md`.
@@ -73,23 +73,16 @@ python -m src.analysis.multimask_uncertainty --site Jurua-A --thresholds 5 10
 - `src/gee_data/`: Earth Engine DSWE export routines.
 - `tests/`: Installation verification tests.
 
-## 6. Dependencies
+## 6. Citation
 
-Major packages used in this workflow:
-- `openpiv` [Zenodo DOI: 10.5281/zenodo.167606](https://doi.org/10.5281/zenodo.167606)
-- `rivgraph` (Schwenk & Hariharan, 2021)
-- `numpy`, `scipy`, `matplotlib`, `rasterio`
-
-## 7. References
-
-If you use this codebase or the multi-angle PIV workflow, please cite:
+If you use this codebase or the multi-angle PIV workflow, please cite both the paper and the archived software:
 
 **The Paper:**
 > Song, X., et al. (2026). An enhanced satellite PIV and graph-based skeletonization workflow for diagnosing migration regimes in regulated transitional rivers. *Computers & Geosciences* (Submitted).
 
-**OpenPIV-Python:**
-> Liberzon, A., Lasagna, D., Aubert, M., Bachant, P., Kirkham, J., Leu, R., & Borg, J. (2021). OpenPIV/openpiv-python: OpenPIV-Python (Version 0.20.5). Zenodo. https://doi.org/10.5281/zenodo.167606
+**The Software:**
+> Song, X. (2026). sxlong2022/transitional-meander-piv: multi-angle Satellite PIV and Trunk Aggregation Workflow (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.18831632
 
-## 8. License
+## 7. Dependencies
 
 This code is distributed under the MIT License. See the `LICENSE` file for details.
