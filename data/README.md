@@ -27,7 +27,7 @@ data/
 ## 1. Obtaining Juruá River Data
 
 The Juruá River benchmark dataset (Chadwick et al., 2023) is publicly available via the Dryad Digital Repository:
-**DOI:** 10.5061/dryad.8pk0p2ntg
+**DOI:** 10.25349/D9HG82
 
 Download the archive, extract the water masks, and place the consecutive yearly `.tif` composites into the respective `data/GEOTIFFS/Jurua-A/mask{1,2,3,4}` directories based on their classification scheme.
 
