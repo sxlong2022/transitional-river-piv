@@ -7,7 +7,11 @@ env/
 venv/
 .venv/
 .env
+
+# Allow results/ directory for sample data
 # results/
+
+# Data directories (exclude large raw data)
 data/GEOTIFFS/*
 !data/GEOTIFFS/.gitkeep
 data/PreparedImagery/*
@@ -17,6 +21,9 @@ data/GIS/*.shx
 data/GIS/*.dbf
 data/GIS/*.prj
 data/GIS/*.cpg
+
+# Exclude .npz and .tif globally, but allow in results/
 *.npz
+!results/**/*.npz
 *.tif
 .DS_Store
