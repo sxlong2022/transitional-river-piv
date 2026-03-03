@@ -135,6 +135,11 @@ def main():
         node_y * m_lat - mu[1],
     ]).T @ axis).astype(float)
 
+    # Sign convention: ensure PCA primary axis points +x (eastward) for YR-A
+    if axis[0] < 0:
+        axis = -axis
+        node_p = -node_p
+
     # ── Figure ──────────────────────────────────────────────────────────
     width_in, fig_h = get_paper_figsize(190, aspect_ratio=2.2)
     fig, (ax_a, ax_b) = plt.subplots(

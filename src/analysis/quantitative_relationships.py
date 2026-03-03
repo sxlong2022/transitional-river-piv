@@ -324,6 +324,9 @@ def aggregate_trunks_from_flat_npz(
         C = np.cov((XY - mu).T)
         evals, evecs = np.linalg.eigh(C)
         axis = evecs[:, int(np.argmax(evals))]
+        # Sign convention: ensure PCA axis points +x (eastward) by default
+        if axis[0] < 0:
+            axis = -axis
         node_p_m = (np.vstack([node_x_m - mu[0], node_y_m - mu[1]]).T @ axis).astype(float)
     else:
         axis = np.array([1.0, 0.0], dtype=float)
