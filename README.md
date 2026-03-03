@@ -42,7 +42,19 @@ The workflow includes a Google Earth Engine script to export Dynamic Surface Wat
 
 *Note: You can specify the root path for data storage by setting the `RIVERPIV_DATA_ROOT` environment variable. By default, the code looks for a `data/` directory at the project root.*
 
-## 4. Usage: Running the Pipeline
+## 4. Sample Data & Reproducing Figures
+
+To allow immediate testing and reproduction of the paper's figures without requiring hours of data downloading and processing, this repository includes the **final diagnostic metrics and continuous profiles** as sample data. 
+
+These lightweight data files are located in `results/RivGraph/` and `results/PostprocessedPIV/`. You can reproduce the main text figures (e.g., Figures 7–10) directly using the analysis scripts.
+
+For example, to instantly reproduce the Figure 10 Synthesis plot using the provided sample data:
+```bash
+python -m src.analysis.plot_fig10_synthesis
+```
+The resulting figure will be saved to `results/figures/paper/Fig10_Synthesis.png`.
+
+## 5. Usage: Running the Pipeline
 
 Once the data is preprocessed and placed in `data/PreparedImagery/`, `data/GEOTIFFS/`, and `data/GIS/`, you can run the complete pipeline using the provided runner.
 
@@ -63,7 +75,7 @@ To calculate the multi-mask uncertainty profiles after running the pipeline:
 python -m src.analysis.multimask_uncertainty --site Jurua-A --thresholds 5 10
 ```
 
-## 5. Repository Structure
+## 6. Repository Structure
 
 - `src/piv_analysis/`: Multi-tilt PIV analysis and fusion via OpenPIV.
 - `src/postprocessing/`: Retilting and temporal vector statistics.
@@ -73,7 +85,7 @@ python -m src.analysis.multimask_uncertainty --site Jurua-A --thresholds 5 10
 - `src/gee_data/`: Earth Engine DSWE export routines.
 - `tests/`: Installation verification tests.
 
-## 6. Citation
+## 7. Citation
 
 If you use this codebase or the multi-angle PIV workflow, please cite both the paper and the archived software:
 
@@ -83,12 +95,12 @@ If you use this codebase or the multi-angle PIV workflow, please cite both the p
 **The Software:**
 > Song, X. (2026). sxlong2022/transitional-river-piv: multi-angle Satellite PIV and Trunk Aggregation Workflow (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.18831632
 
-## 7. Core Dependencies & Acknowledgments
+## 8. Core Dependencies & Acknowledgments
 
 This workflow builds heavily upon two excellent open-source libraries:
 - **[OpenPIV](https://github.com/OpenPIV/openpiv-python)**: Used as the core engine for computing subpixel riverbank displacements.
 - **[RivGraph](https://github.com/VeinsOfTheEarth/RivGraph)**: Used for deriving and aggregating graph-based channel skeletons. Note that RivGraph's specific dependency chain (e.g., specific versions of GDAL and Fiona) is the reason this project strictly requires **Python 3.9**.
 
-## 8. License
+## 9. License
 
 This code is distributed under the MIT License. See the `LICENSE` file for details.
