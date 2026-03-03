@@ -7,7 +7,7 @@ env/
 venv/
 .venv/
 .env
-results/
+# results/
 data/GEOTIFFS/*
 !data/GEOTIFFS/.gitkeep
 data/PreparedImagery/*

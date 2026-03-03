@@ -1,0 +1,6 @@
+Configuration,Angles,Raw (n),Filtered (n),Keep (%),Median |M| raw (m/yr),Mean N,Precision CV,Dir Std (°)
+Single-Angle (0°),0°,2449,0,0.0,0.15,1.0,—,—
+Single-Angle (15°),15°,2625,0,0.0,0.12,1.0,—,—
+Single-Angle (30°),30°,2415,0,0.0,0.15,1.0,—,—
+Single-Angle (45°),45°,2245,0,0.0,0.12,1.0,—,—
+Multi-Angle Fusion,0°+15°+30°+45°,3796,2289,60.3,0.13,2.2,0.583,56.5
