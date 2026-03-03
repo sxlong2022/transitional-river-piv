@@ -83,6 +83,12 @@ If you use this codebase or the multi-angle PIV workflow, please cite both the p
 **The Software:**
 > Song, X. (2026). sxlong2022/transitional-river-piv: multi-angle Satellite PIV and Trunk Aggregation Workflow (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.18831632
 
-## 7. Dependencies
+## 7. Core Dependencies & Acknowledgments
+
+This workflow builds heavily upon two excellent open-source libraries:
+- **[OpenPIV](https://github.com/OpenPIV/openpiv-python)**: Used as the core engine for computing subpixel riverbank displacements.
+- **[RivGraph](https://github.com/VeinsOfTheEarth/RivGraph)**: Used for deriving and aggregating graph-based channel skeletons. Note that RivGraph's specific dependency chain (e.g., specific versions of GDAL and Fiona) is the reason this project strictly requires **Python 3.9**.
+
+## 8. License
 
 This code is distributed under the MIT License. See the `LICENSE` file for details.
