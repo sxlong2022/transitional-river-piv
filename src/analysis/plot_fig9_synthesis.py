@@ -98,7 +98,7 @@ def _range_summary(values: List[float]) -> Dict[str, float]:
     }
 
 
-def plot_fig10(
+def plot_fig9(
     out_path: Path,
     *,
     sites: List[str],
@@ -344,9 +344,9 @@ def main() -> None:
     if args.out:
         out_path = Path(args.out)
     else:
-        out_path = _PROJECT_ROOT / "results" / "figures" / "paper" / "Fig10_Synthesis.png"
+        out_path = _PROJECT_ROOT / "results" / "figures" / "paper" / "Fig9_Synthesis.png"
 
-    plot_fig10(
+    plot_fig9(
         out_path,
         sites=[str(s) for s in args.sites],
         yr_masks=[int(m) for m in args.yr_masks],

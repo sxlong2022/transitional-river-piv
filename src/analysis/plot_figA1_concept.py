@@ -1,7 +1,7 @@
 """
-plot_fig3_concept.py
+plot_figA1_concept.py
 ====================
-Generate **Fig. 3**: 2-panel *conceptual* illustration of the
+Generate **Fig. A1**: 2-panel *conceptual* illustration of the
 trunk-aggregation algorithm for Computers & Geosciences.
 
 Panel (a): Union-Find spatial clustering — overview + zoomed inset
@@ -19,8 +19,8 @@ JoH-style-rule compliant:
 
 Usage:
     conda activate riverpiv
-    python src\\analysis\\plot_fig3_concept.py
-    python src\\analysis\\plot_fig3_concept.py --preset paper
+    python src\\analysis\\plot_figA1_concept.py
+    python src\\analysis\\plot_figA1_concept.py --preset paper
 """
 
 from __future__ import annotations
@@ -57,7 +57,7 @@ MASK = 4
 NPZ = CFG_ROOT / "results" / "PostprocessedPIV" / SITE / (
     f"{SITE}_mask{MASK}_link_sBCMn_flat_step20_metric_v2.npz"
 )
-OUT = CFG_ROOT / "results" / "figures" / "paper" / "Fig3_Concept.png"
+OUT = CFG_ROOT / "results" / "figures" / "paper" / "FigA1_Concept.png"
 
 def main():
     preset = args.preset
@@ -350,7 +350,7 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(str(OUT), dpi=600, bbox_inches="tight",
                 pad_inches=0.05, facecolor="white")
-    print(f"[OK] Saved Fig. 3 concept figure → {OUT}")
+    print(f"[OK] Saved Fig. A1 concept figure → {OUT}")
     print(f"     Size: {width_in:.2f} × {fig_h:.2f} in @ 600 dpi")
     plt.close(fig)
 
