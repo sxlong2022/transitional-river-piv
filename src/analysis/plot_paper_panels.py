@@ -1367,7 +1367,7 @@ def main():
     if args.mode == "overlay_2x2":
         if not args.out:
             if [_normalize_site(s) for s in args.sites[:2]] == ["HuangHe-A", "HuangHe-B"] and sorted(args.masks) == [2, 4]:
-                fname = "Fig4_Overlay_AvsB.png"
+                fname = "Fig3_Overlay_AvsB.png"
             else:
                 fname = f"overlay_{'_'.join(args.sites)}_mask{''.join(map(str, args.masks))}.png"
             out_path = out_dir / fname
@@ -1394,7 +1394,7 @@ def main():
         mask = args.masks[0]
         if not args.out:
             if [_normalize_site(s) for s in args.sites[:2]] == ["HuangHe-A", "HuangHe-B"] and int(mask) == 4:
-                fname = "Fig7_Scatter_AvsB.png"
+                fname = "Fig6_Scatter_AvsB.png"
             else:
                 fname = f"scatter_{'_'.join(args.sites)}_mask{mask}.png"
             out_path = out_dir / fname
@@ -1418,7 +1418,7 @@ def main():
     elif args.mode == "profiles_2col":
         if not args.out:
             if [_normalize_site(s) for s in args.sites[:2]] == ["HuangHe-A", "HuangHe-B"]:
-                fname = "Fig5_Profiles_AvsB.png"
+                fname = "Fig4_Profiles_AvsB.png"
             else:
                 fname = f"profiles_{'_'.join(args.sites)}_mask{''.join(map(str, args.masks))}.png"
             out_path = out_dir / fname
@@ -1449,7 +1449,7 @@ def main():
         if not args.out:
             norm_sites = [_normalize_site(s) for s in sites]
             if norm_sites[:3] == ["HuangHe-A", "HuangHe-B", "Jurua-A"] and [int(m) for m in masks[:3]] == [4, 4, 1]:
-                fname = "FigS1_FFTSpectra_AvsB_Jurua.png"
+                fname = "FigS2_FFTSpectra_AvsB_Jurua.png"
             else:
                 fname = f"fft_spectra_{'_'.join(norm_sites)}_mask{'_'.join(map(str, masks))}.png"
             out_path = out_dir / fname
@@ -1478,7 +1478,7 @@ def main():
         if not args.out:
             norm_sites = [_normalize_site(s) for s in sites]
             if norm_sites[:3] == ["HuangHe-A", "HuangHe-B", "Jurua-A"] and [int(m) for m in masks[:3]] == [4, 4, 1]:
-                fname = "FigS2_DimlessCB_AvsB_Jurua.png"
+                fname = "FigS3_DimlessCB_AvsB_Jurua.png"
             else:
                 fname = f"dimless_cb_{'_'.join(norm_sites)}_mask{'_'.join(map(str, masks))}.png"
             out_path = out_dir / fname
