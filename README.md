@@ -46,13 +46,24 @@ The workflow includes a Google Earth Engine script to export Dynamic Surface Wat
 
 To allow immediate testing and reproduction of the paper's figures without requiring hours of data downloading and processing, this repository includes the **final diagnostic metrics and continuous profiles** as sample data. 
 
-These lightweight data files are located in `results/RivGraph/` and `results/PostprocessedPIV/`. You can reproduce the main text figures (e.g., Figures 7–10) directly using the analysis scripts.
+These lightweight data files are located in `results/RivGraph/` and `results/PostprocessedPIV/`. You can reproduce the main text figures (Figs. 6–9 and S2–S3) directly using the analysis scripts.
 
-For example, to instantly reproduce the Figure 10 Synthesis plot using the provided sample data:
+| Figure | Description | Script / Command |
+| --- | --- | --- |
+| Fig. 6a,b | Trunk-scale spectral structure (YR-A, YR-B) | `python -m src.analysis.plot_fig6_spectral_structure --site HuangHe-A --mask-level 4` |
+| Fig. 7 | Link-scale scatter: |Mn| vs |C| and B | `python -m src.analysis.plot_paper_panels --mode scatter_2x2 --sites HuangHe-A HuangHe-B --masks 4` |
+| Fig. 8 | Conceptual migration-regime schematic | `python -m src.analysis.plot_fig8_conceptual` |
+| Fig. 9 | Synthesis of regime indicators | `python -m src.analysis.plot_fig9_synthesis` |
+| Fig. S2 | Fourier spectra of width & curvature | `python -m src.analysis.plot_paper_panels --mode fft_spectra --sites HuangHe-A HuangHe-B Jurua-A --masks 4 4 1` |
+| Fig. S3 | Dimensionless |C|B vs |Mn| | `python -m src.analysis.plot_paper_panels --mode dimless_cb --sites HuangHe-A HuangHe-B Jurua-A --masks 4 4 1` |
+
+For example, to reproduce Fig. 9 (Synthesis):
 ```bash
-python -m src.analysis.plot_fig10_synthesis
+python -m src.analysis.plot_fig9_synthesis
 ```
-The resulting figure will be saved to `results/figures/paper/Fig10_Synthesis.png`.
+The resulting figure will be saved to `results/figures/paper/Fig9_Synthesis.png`.
+
+Fig. 2 (workflow diagram) is provided as a static vector graphic at `results/figures/paper/Fig2.svg`.
 
 ## 5. Usage: Running the Pipeline
 
