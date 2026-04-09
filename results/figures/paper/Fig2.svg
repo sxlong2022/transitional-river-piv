@@ -1,0 +1,136 @@
+<svg width="900" height="620" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+        </marker>
+        <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+            <feOffset result="offOut" in="SourceAlpha" dx="1.5" dy="1.5" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="1.5" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+    </defs>
+
+    <rect width="100%" height="100%" fill="#ffffff" />
+
+    <style>
+        text { font-family: 'Times New Roman', serif; }
+        .box { fill: #f8f9fa; stroke: #343a40; stroke-width: 1.5px; filter: url(#shadow); rx: 6; ry: 6; }
+        .box-highlight { fill: #e7f5ff; stroke: #007bff; stroke-width: 1.5px; filter: url(#shadow); rx: 6; ry: 6; }
+        .box-input { fill: #fff3cd; stroke: #ffc107; stroke-width: 1.5px; filter: url(#shadow); rx: 6; ry: 6; }
+        .box-output { fill: #d4edda; stroke: #28a745; stroke-width: 1.5px; filter: url(#shadow); rx: 6; ry: 6; }
+        .text-title { font-weight: bold; font-size: 14px; fill: #212529; text-anchor: middle; }
+        .text-detail { font-size: 11px; fill: #495057; text-anchor: middle; }
+        .text-label { font-weight: bold; font-size: 16px; fill: #333; }
+        .var { font-style: italic; }
+        .sub { font-style: normal; font-size: 0.75em; }
+        .conn-line { stroke: #333; stroke-width: 1.5px; fill: none; marker-end: url(#arrow); }
+        .conn-line-no-arrow { stroke: #333; stroke-width: 1.5px; fill: none; }
+        .note { font-size: 10px; fill: #dc3545; font-style: italic; }
+    </style>
+
+    <!-- Zone 1: Input -->
+    <g transform="translate(40, 260)">
+        <rect width="140" height="80" class="box-input" />
+        <text x="70" y="32" class="text-title">Annual Water Masks</text>
+        <text x="70" y="50" class="text-detail">(Landsat DSWE)</text>
+        <text x="70" y="65" class="text-detail">Mask 1–4</text>
+    </g>
+    <text x="40" y="360" class="note">Repeat for Mask 1–4</text>
+    <text x="40" y="375" class="note">(Uncertainty Envelope)</text>
+
+    <!-- Zone 2: PIV Branch -->
+    <g transform="translate(240, 80)">
+        <rect width="170" height="70" class="box-highlight" />
+        <text x="85" y="30" class="text-title">Multi-angle</text>
+        <text x="85" y="45" class="text-title">Augmentation</text>
+        <text x="85" y="60" class="text-detail">Rot: 0°, 15°, 30°, 45°</text>
+    </g>
+
+    <g transform="translate(440, 80)">
+        <rect width="170" height="70" class="box" />
+        <text x="85" y="25" class="text-title">OpenPIV Inversion</text>
+        <text x="85" y="42" class="text-detail">Win: 64px, Olp: 50%, SNR &gt; 1.3</text>
+        <text x="85" y="56" class="text-title" font-size="11px">Outlier Replacement</text>
+        <text x="85" y="66" class="text-detail">(Local Mean)</text>
+    </g>
+
+    <g transform="translate(640, 80)">
+        <rect width="180" height="70" class="box-highlight" />
+        <text x="90" y="30" class="text-title">Ensemble Fusion</text>
+        <text x="90" y="50" class="text-detail">Rotate back &amp;</text>
+        <text x="90" y="62" class="text-detail">Spatial Ensemble Averaging</text>
+    </g>
+
+    <g transform="translate(640, 180)">
+        <rect width="180" height="70" class="box-highlight" />
+        <text x="90" y="30" class="text-title">Strict Affine</text>
+        <text x="90" y="45" class="text-title">Georeferencing</text>
+        <text x="90" y="60" class="text-detail">Pixel (<tspan class="var">u, v</tspan>) → Geo (<tspan class="var">x, y</tspan>)</text>
+    </g>
+
+    <!-- New Intermediate Box -->
+    <g transform="translate(640, 280)">
+        <rect width="180" height="60" class="box" />
+        <text x="90" y="25" class="text-title">Georeferenced</text>
+        <text x="90" y="40" class="text-title">PIV Vector Field</text>
+        <text x="90" y="55" class="text-detail"><tspan class="var">V</tspan><tspan class="sub" dy="2">PIV</tspan><tspan dy="-2">(<tspan class="var">x, y</tspan>) (m/yr)</tspan></text>
+    </g>
+
+    <!-- Zone 3: Morphology Branch -->
+    <g transform="translate(240, 420)">
+        <rect width="170" height="70" class="box" />
+        <text x="85" y="35" class="text-title">RivGraph Toolbox</text>
+        <text x="85" y="55" class="text-detail">(Skeletonization)</text>
+    </g>
+
+    <g transform="translate(440, 420)">
+        <rect width="170" height="70" class="box" />
+        <text x="85" y="25" class="text-title">Morphological</text>
+        <text x="85" y="40" class="text-title">Extraction</text>
+        <text x="85" y="55" class="text-detail">Width (<tspan class="var">B</tspan>), Curvature (<tspan class="var">C</tspan>)</text>
+        <text x="85" y="65" class="text-detail">Normal Intersection Method</text>
+    </g>
+
+    <!-- Zone 4: Integration -->
+    <g transform="translate(640, 370)">
+        <rect width="180" height="70" class="box" />
+        <text x="90" y="25" class="text-title">Normal Projection</text>
+        <text x="90" y="45" class="text-detail">Project Vector onto</text>
+        <text x="90" y="60" class="text-detail">Centerline Normal (<tspan class="var">n̂</tspan>)</text>
+    </g>
+
+    <g transform="translate(640, 520)">
+        <rect width="180" height="60" class="box-output" />
+        <text x="90" y="25" class="text-title">Normal Migration Rate Series</text>
+        <text x="90" y="48" class="text-title"><tspan class="var">M</tspan><tspan class="sub" dy="2">n</tspan><tspan dy="-2">(<tspan class="var">s</tspan>)</tspan></text>
+    </g>
+
+    <g transform="translate(440, 520)">
+        <rect width="170" height="60" class="box-output" />
+        <text x="85" y="25" class="text-title">Geometric Series</text>
+        <text x="85" y="48" class="text-title"><tspan class="var">B</tspan>(<tspan class="var">s</tspan>), <tspan class="var">C</tspan>(<tspan class="var">s</tspan>)</text>
+    </g>
+
+    <!-- Connections -->
+    <path d="M 180 300 L 210 300" class="conn-line-no-arrow" />
+    <path d="M 210 300 L 210 115 L 240 115" class="conn-line" />
+    <path d="M 210 300 L 210 455 L 240 455" class="conn-line" />
+
+    <path d="M 410 115 L 440 115" class="conn-line" />
+    <path d="M 610 115 L 640 115" class="conn-line" />
+    <path d="M 730 150 L 730 180" class="conn-line" />
+    <path d="M 730 250 L 730 280" class="conn-line" />
+    <path d="M 730 340 L 730 370" class="conn-line" />
+
+    <path d="M 410 455 L 440 455" class="conn-line" />
+    <path d="M 525 490 L 525 520" class="conn-line" />
+
+    <path d="M 410 455 L 425 455 L 425 400 L 640 400" class="conn-line" stroke-dasharray="5,3" />
+    <text x="525" y="395" fill="#555" font-size="10" text-anchor="middle">Centerlines (<tspan class="var">s</tspan>)</text>
+
+    <path d="M 730 440 L 730 520" class="conn-line" />
+
+    <!-- Branch Labels -->
+    <text x="325" y="70" class="text-label" fill="#007bff">PIV Branch</text>
+    <text x="325" y="410" class="text-label" fill="#333">Morphology Branch</text>
+</svg>
