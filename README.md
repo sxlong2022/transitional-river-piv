@@ -52,10 +52,10 @@ These lightweight data files are located in `results/RivGraph/` and `results/Pos
 
 | Figure | Description | Script / Command |
 | --- | --- | --- |
-| Fig. 4 | Trunk organization contrast (YR-A vs YR-B) | `python -m src.analysis.plot_fig4_trunk_overlay --site HuangHe-A --mask-level 4 --preset paper` (repeat with `--site HuangHe-B`) |
+| Fig. 4 | Trunk organization contrast (YR-A vs YR-B) | Run for each site × mask combination: `python -m src.analysis.plot_fig4_trunk_overlay --site HuangHe-A --mask-level 2 --preset paper`, `--mask-level 4`, then repeat with `--site HuangHe-B`. (Fig. 4 shows Mask 2 and Mask 4 columns side-by-side.) |
 | Fig. 5 | Along-channel B, C, Mn profiles | `python -m src.analysis.plot_fig5_trunk_profiles --site HuangHe-A --mask-level 4 --preset paper` (repeat with `--site HuangHe-B`) |
-| Fig. 6a | Trunk-scale spectral structure (YR-A) | `python -m src.analysis.plot_fig6_spectral_structure --site HuangHe-A --mask-level 4` |
-| Fig. 6b | Trunk-scale spectral structure (YR-B) | `python -m src.analysis.plot_fig6_spectral_structure --site HuangHe-B --mask-level 4` |
+| Fig. 6a | Trunk-scale structure statistics — ACF/CCF (YR-A) | `python -m src.analysis.plot_fig6_spectral_structure --site HuangHe-A --mask-level 4` |
+| Fig. 6b | Trunk-scale structure statistics — ACF/CCF (YR-B) | `python -m src.analysis.plot_fig6_spectral_structure --site HuangHe-B --mask-level 4` |
 | Fig. 7 | Link-scale scatter: \|Mn\| vs \|C\| and B | `python -m src.analysis.plot_paper_panels --mode scatter_2x2 --sites HuangHe-A HuangHe-B --masks 4` |
 | Fig. 8 | Conceptual migration-regime schematic | `python -m src.analysis.plot_fig8_conceptual` |
 | Fig. 9 | Synthesis of regime indicators | `python -m src.analysis.plot_fig9_synthesis` |
