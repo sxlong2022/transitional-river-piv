@@ -46,24 +46,26 @@ The workflow includes a Google Earth Engine script to export Dynamic Surface Wat
 
 To allow immediate testing and reproduction of the paper's figures without requiring hours of data downloading and processing, this repository includes the **final diagnostic metrics and continuous profiles** as sample data. 
 
-These lightweight data files are located in `results/RivGraph/` and `results/PostprocessedPIV/`. You can reproduce the main text figures (Figs. 6–9 and S2–S3) directly using the analysis scripts.
+These lightweight data files are located in `results/RivGraph/` and `results/PostprocessedPIV/`. You can reproduce Figs. 4–9, A1, S2, and S3 directly using the analysis scripts. Figs. 1 and 3 require the full satellite imagery and water masks (see Section 3 for data acquisition); Fig. 2 is provided as a static vector graphic at `results/figures/paper/Fig2.svg`.
 
 | Figure | Description | Script / Command |
 | --- | --- | --- |
-| Fig. 6a,b | Trunk-scale spectral structure (YR-A, YR-B) | `python -m src.analysis.plot_fig6_spectral_structure --site HuangHe-A --mask-level 4` |
-| Fig. 7 | Link-scale scatter: |Mn| vs |C| and B | `python -m src.analysis.plot_paper_panels --mode scatter_2x2 --sites HuangHe-A HuangHe-B --masks 4` |
+| Fig. 4 | Trunk organization contrast (YR-A vs YR-B) | `python -m src.analysis.plot_fig4_trunk_overlay --site HuangHe-A --mask-level 4 --preset paper` (repeat with `--site HuangHe-B`) |
+| Fig. 5 | Along-channel B, C, Mn profiles | `python -m src.analysis.plot_fig5_trunk_profiles --site HuangHe-A --mask-level 4 --preset paper` (repeat with `--site HuangHe-B`) |
+| Fig. 6a | Trunk-scale spectral structure (YR-A) | `python -m src.analysis.plot_fig6_spectral_structure --site HuangHe-A --mask-level 4` |
+| Fig. 6b | Trunk-scale spectral structure (YR-B) | `python -m src.analysis.plot_fig6_spectral_structure --site HuangHe-B --mask-level 4` |
+| Fig. 7 | Link-scale scatter: \|Mn\| vs \|C\| and B | `python -m src.analysis.plot_paper_panels --mode scatter_2x2 --sites HuangHe-A HuangHe-B --masks 4` |
 | Fig. 8 | Conceptual migration-regime schematic | `python -m src.analysis.plot_fig8_conceptual` |
 | Fig. 9 | Synthesis of regime indicators | `python -m src.analysis.plot_fig9_synthesis` |
+| Fig. A1 | Trunk aggregation algorithm illustration | `python -m src.analysis.plot_figA1_concept --preset paper` |
 | Fig. S2 | Fourier spectra of width & curvature | `python -m src.analysis.plot_paper_panels --mode fft_spectra --sites HuangHe-A HuangHe-B Jurua-A --masks 4 4 1` |
-| Fig. S3 | Dimensionless |C|B vs |Mn| | `python -m src.analysis.plot_paper_panels --mode dimless_cb --sites HuangHe-A HuangHe-B Jurua-A --masks 4 4 1` |
+| Fig. S3 | Dimensionless \|C\|B vs \|Mn\| | `python -m src.analysis.plot_paper_panels --mode dimless_cb --sites HuangHe-A HuangHe-B Jurua-A --masks 4 4 1` |
 
 For example, to reproduce Fig. 9 (Synthesis):
 ```bash
 python -m src.analysis.plot_fig9_synthesis
 ```
 The resulting figure will be saved to `results/figures/paper/Fig9_Synthesis.png`.
-
-Fig. 2 (workflow diagram) is provided as a static vector graphic at `results/figures/paper/Fig2.svg`.
 
 ## 5. Usage: Running the Pipeline
 
