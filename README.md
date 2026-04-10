@@ -108,7 +108,7 @@ If you use this codebase or the multi-angle PIV workflow, please cite both the p
 > Song, X., et al. (2026). An enhanced satellite PIV and graph-based skeletonization workflow for diagnosing migration regimes in regulated transitional rivers. *Computers & Geosciences* (Submitted).
 
 **The Software:**
-> Song, X. (2026). sxlong2022/transitional-river-piv: multi-angle Satellite PIV and Trunk Aggregation Workflow (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.18831632
+> Song, X. (2026). sxlong2022/transitional-river-piv: multi-angle Satellite PIV and Trunk Aggregation Workflow (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.19493042
 
 ## 8. Core Dependencies & Acknowledgments
 
