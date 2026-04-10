@@ -48,6 +48,8 @@ To allow immediate testing and reproduction of the paper's figures without requi
 
 These lightweight data files are located in `results/RivGraph/` and `results/PostprocessedPIV/`. You can reproduce Figs. 4–9, A1, S2, and S3 directly using the analysis scripts. Figs. 1 and 3 require the full satellite imagery and water masks (see Section 3 for data acquisition); Fig. 2 is provided as a static vector graphic at `results/figures/paper/Fig2.svg`.
 
+> **Site name mapping**: In the codebase and script arguments, `HuangHe-A` and `HuangHe-B` correspond to the **YR-A** and **YR-B** study reaches referred to in the paper.
+
 | Figure | Description | Script / Command |
 | --- | --- | --- |
 | Fig. 4 | Trunk organization contrast (YR-A vs YR-B) | `python -m src.analysis.plot_fig4_trunk_overlay --site HuangHe-A --mask-level 4 --preset paper` (repeat with `--site HuangHe-B`) |
