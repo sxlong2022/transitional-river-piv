@@ -102,13 +102,9 @@ python -m src.analysis.multimask_uncertainty --site Jurua-A --thresholds 5 10
 
 ## 7. Citation
 
-If you use this codebase or the multi-angle PIV workflow, please cite both the paper and the archived software:
+If you use this codebase or the multi-angle PIV workflow, please cite the paper:
 
-**The Paper:**
 > Song, X., Feng, H., Xu, H., & Bai, Y. (2026). An enhanced satellite PIV and graph-based skeletonization workflow for diagnosing migration regimes in regulated transitional rivers. *Computers & Geosciences*, 214, 106183. https://doi.org/10.1016/j.cageo.2026.106183
-
-**The Software:**
-> Song, X. (2026). sxlong2022/transitional-river-piv: multi-angle Satellite PIV and Trunk Aggregation Workflow (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.19493042
 
 ## 8. Core Dependencies & Acknowledgments
 
