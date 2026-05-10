@@ -1,6 +1,6 @@
 # Transitional River PIV Workflow
 
-This repository contains the source code for the paper: **"An enhanced satellite PIV and graph-based skeletonization workflow for diagnosing migration regimes in regulated transitional rivers"** by Xiaolong Song et al., submitted to *Computers & Geosciences*.
+This repository contains the source code for the paper: **"An enhanced satellite PIV and graph-based skeletonization workflow for diagnosing migration regimes in regulated transitional rivers"** by Xiaolong Song et al., published in *Computers & Geosciences* (2026).
 
 The codebase implements a comprehensive workflow for extracting subpixel riverbank migration from dense optical satellite time series. It utilizes multi-angle Particle Image Velocimetry (PIV) fusion, continuous normal-intersection sampling, Union-Find/DAG-based trunk aggregation, and multi-mask uncertainty propagation.
 
@@ -105,7 +105,7 @@ python -m src.analysis.multimask_uncertainty --site Jurua-A --thresholds 5 10
 If you use this codebase or the multi-angle PIV workflow, please cite both the paper and the archived software:
 
 **The Paper:**
-> Song, X., et al. (2026). An enhanced satellite PIV and graph-based skeletonization workflow for diagnosing migration regimes in regulated transitional rivers. *Computers & Geosciences* (Submitted).
+> Song, X., Feng, H., Xu, H., & Bai, Y. (2026). An enhanced satellite PIV and graph-based skeletonization workflow for diagnosing migration regimes in regulated transitional rivers. *Computers & Geosciences*, 214, 106183. https://doi.org/10.1016/j.cageo.2026.106183
 
 **The Software:**
 > Song, X. (2026). sxlong2022/transitional-river-piv: multi-angle Satellite PIV and Trunk Aggregation Workflow (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.19493042
